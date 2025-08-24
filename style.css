@@ -21,18 +21,51 @@ header h1 {
 }
 
 img {
-    margin: 4%;
+    margin-top: 4%;
 }
 
-header p {
-  margin-top: 0.1%;
-  font-size: 1.2rem;
+
+
+
+
+header nav {
+    text-align:center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
 }
+
+header nav a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color on hover */
+header nav a:hover {
+    background-color: #a47864;
+    color: white;
+}
+
+nav {
+    background-color:red;
+}
+
+
+
+
 
 main {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 0 1rem;
+}
+
+main h1{
+    text-align:center;
 }
 
 h2 {
