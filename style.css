@@ -1,19 +1,22 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9fafb;
-  color: #333;
-  line-height: 1.6;
+    margin: 0;
+    /*font-family: Arial, sans-serif;*/
+    font-family: Helvetica;
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-  width: 12%;
-  background: #a47864;
-  color: white;
-  text-align: center;
-  padding-left: 0;
-  padding-right: 0;
-  font-size:1.12rem;
+    width: 30%;
+    height: 100%;
+    /*background: #a47864;*/
+    background: white;
+    color: white;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.12rem;
 }
 
 logofoto {
@@ -23,6 +26,30 @@ logofoto {
 
 header h1 {
     margin: 0;
+    width: 70%;
+}
+
+.swiper {
+    width: 70%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 2; /* domyœlnie ukryte */
+    transition: opacity 1s ease; /* p³ynne przejœcie */
+}
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* obraz wype³nia ca³y obszar */
+    }
+
+swiper-slide-visible{
+    justify-content:center;
 }
 
 img {
@@ -39,12 +66,13 @@ nav {
 }
 
 header nav {
-    text-align: center;
+    text-align: right;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #a47864;
+    /*background-color: #a47864;*/
+    background-color: white;
 }
 
     header nav a {
@@ -85,7 +113,7 @@ h2 {
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
 ul {

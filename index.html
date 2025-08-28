@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nic więcej</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="side">
         <header>
-            <h1> <img src="zdjecia/logo.png" alt="logofoto" width="128" height="128"/> </h1>
+            <h1> <img src="zdjecia/logo.png" alt="logofoto" width="128" height="128" /> </h1>
             <nav>
                 <a href="index.html">Strona główna</a>
                 <a href="onas.html">O nas</a>
@@ -20,10 +22,38 @@
         <main>
             <h1>
                 Strona w budowie!<br />
+                                 <div class="swiper">
+                                     <div class="swiper-wrapper">
+                                         <div class="swiper-slide"><img src="zdjecia/1strona-w-budowie.jpg" alt="Foto 1" /></div>
+                                         <div class="swiper-slide"><img src="zdjecia/2strona-w-budowie.jpg" alt="Foto 2" /></div>
+                                         <div class="swiper-slide"><img src="zdjecia/3strona-w-budowie.jpg" alt="Foto 3" /></div>
+                                     </div>
 
-                <img src="zdjecia/strona-w-budowie.jpg" alt="budowafoto" width="150" height="200" />
+                                     <!-- Paginations (kropki) 
+                                     <div class="swiper-pagination"></div>
 
-
+                                     <!-- Nawigacja (strzałki) 
+                                     <div class="swiper-button-next"></div>
+                                     <div class="swiper-button-prev"></div>-->
+                                     <script>
+                                         const swiper = new Swiper(".swiper", {
+                                             loop: true, // zapętlenie
+                                             autoplay: {
+                                                 delay: 5000, // czas między slajdami (ms)
+                                                 disableOnInteraction: false, // działa nawet po kliknięciu
+                                             },
+                                             effect: "fade", // efekt płynnego przejścia
+                                             pagination: {
+                                                 el: ".swiper-pagination",
+                                                 clickable: true,
+                                             },
+                                             navigation: {
+                                                 nextEl: ".swiper-button-next",
+                                                 prevEl: ".swiper-button-prev",
+                                             },
+                                         });
+                                     </script>
+                                 </div>
             </h1>
             <section class="about">
                 <h2>O nas!</h2>
@@ -39,9 +69,13 @@
                 </ul>
             </section>
         </main>
-     </div>
-        <footer>
-            <p>© 2025 Maciej Karaś. Wszystkie prawa zastrzeżone.</p>
-        </footer>
+    </div>
+    <footer>
+        <p>© 2025 Maciej Karaś. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+
+
+
 </body>
 </html>
