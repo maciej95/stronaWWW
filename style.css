@@ -19,10 +19,15 @@ header {
     font-size: 1.12rem;
 }
 
-logofoto {
-    width: 120px;
-    height: 120px;
-}
+    header.logofoto {
+        background-color: red;
+        margin: 0;
+        text-align: right;
+    }
+
+    header .logofoto img {
+        display: inline-block;
+    }
 
 header h1 {
     margin: 0;
@@ -71,7 +76,6 @@ header nav {
     margin: 0;
     padding: 0;
     width: 100%;
-    /*background-color: #a47864;*/
     background-color: white;
 }
 
@@ -95,8 +99,9 @@ header nav {
 
 
 main {
-    max-width: 800px;
-    margin: 1rem auto;
+    max-width: 70%;
+    margin-left: 0,5rem;
+    margin-right: 0,5rem;
     padding: 0 1rem;
 }
 
@@ -108,12 +113,31 @@ h2 {
     color: #a47864;
 }
 
-.about, .contact {
-  margin-bottom: 2rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+.about {
+    margin-top: 105px;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product {
+    margin-top: 139px;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact {
+    margin-top: 174px;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 ul {
@@ -147,7 +171,6 @@ footer {
 
 
 
-
 @media (max-width: 768px){
     .side {
         flex-direction: column;
@@ -155,5 +178,28 @@ footer {
     header {
         width: 100%;
     }
+        header nav {
+            text-align: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
 
+            header nav a {
+                display: block;
+                color: #000;
+                padding: 4px 4px;
+                text-decoration: none;
+                font-size: 95%;
+            }
+
+        header .logofoto {
+            text-align: center;
+        }
+            header .logofoto img {
+                display: inline-block;
+                max-width: 100%;
+                height: auto;
+            }
 }
