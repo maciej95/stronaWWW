@@ -7,8 +7,13 @@ body {
     line-height: 1.6;
 }
 
+.side {
+    display: flex;
+    min-height: 100vh;
+}
+
 header {
-    width: 30%;
+    flex: 0 0 350px;
     height: 100%;
     /*background: #a47864;*/
     background: white;
@@ -34,8 +39,20 @@ header h1 {
     width: 100%;
 }
 
+main {
+    flex: 1;
+    max-width: 100%;
+    margin-left: 0,5rem;
+    margin-right: 0,5rem;
+    padding: 0 1rem;
+}
+
+    main h1 {
+        text-align: center;
+    }
+
 .swiper {
-    width: 70%;
+    width: 60%;
     height: 100%;
 }
 
@@ -48,8 +65,8 @@ header h1 {
 }
 
     .swiper-slide img {
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
         object-fit: cover; /* obraz wype³nia ca³y obszar */
     }
 
@@ -59,11 +76,6 @@ swiper-slide-visible{
 
 img {
     margin-top: 4%;
-}
-
-.side {
-    display: flex;
-    
 }
 
 nav {
@@ -93,51 +105,38 @@ header nav {
             color: #a47864;
         }
 
-
-
-
-
-
-main {
-    max-width: 70%;
-    margin-left: 0,5rem;
-    margin-right: 0,5rem;
-    padding: 0 1rem;
-}
-
-main h1{
-    text-align:center;
-}
-
 h2 {
     color: #a47864;
 }
 
 .about {
+    max-width: 1000px;
     margin-top: 105px;
     margin-bottom: 2rem;
     background: white;
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: solid;
+    border-block-color: black;
 }
 
 .product {
+    max-width: 1000px;
     margin-top: 139px;
     margin-bottom: 2rem;
     background: white;
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: solid;
+    border-block-color: black;
 }
 
 .contact {
+    max-width: 1000px;
     margin-top: 174px;
     margin-bottom: 2rem;
     background: white;
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: solid;
+    border-block-color: black;
 }
 
 ul {
