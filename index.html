@@ -23,43 +23,35 @@
                 <a href="kontakt.html">kontakt</a>
             </nav>
         </header>
-
         <main>
-            <h1>
-                Strona w budowie!<br />
-                                 <div class="swiper">
-                                     <div class="swiper-wrapper">
-                                         <div class="swiper-slide"><img src="zdjecia/1strona-w-budowie.jpg" alt="Foto 1" /></div>
-                                         <div class="swiper-slide"><img src="zdjecia/2strona-w-budowie.jpg" alt="Foto 2" /></div>
-                                         <div class="swiper-slide"><img src="zdjecia/3strona-w-budowie.jpg" alt="Foto 3" /></div>
-                                     </div>
-
-                                     <!-- Paginations (kropki) 
-                                     <div class="swiper-pagination"></div>
-
-                                     <!-- Nawigacja (strzałki) 
-                                     <div class="swiper-button-next"></div>
-                                     <div class="swiper-button-prev"></div>-->
-                                     <script>
-                                         const swiper = new Swiper(".swiper", {
-                                             loop: true, // zapętlenie
-                                             autoplay: {
-                                                 delay: 5000, // czas między slajdami (ms)
-                                                 disableOnInteraction: false, // działa nawet po kliknięciu
-                                             },
-                                             effect: "fade", // efekt płynnego przejścia
-                                             pagination: {
-                                                 el: ".swiper-pagination",
-                                                 clickable: true,
-                                             },
-                                             navigation: {
-                                                 nextEl: ".swiper-button-next",
-                                                 prevEl: ".swiper-button-prev",
-                                             },
-                                         });
-                                     </script>
-                                 </div>
-            </h1>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="zdjecia/1strona-w-budowie.jpg" alt="Foto 1" /></div>
+                    <div class="swiper-slide"><img src="zdjecia/2strona-w-budowie.jpg" alt="Foto 2" /></div>
+                    <div class="swiper-slide"><img src="zdjecia/3strona-w-budowie.jpg" alt="Foto 3" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <script>
+                    const swiper = new Swiper(".swiper", {
+                        loop: true, // zapętlenie
+                        autoplay: {
+                            delay: 7000, // czas między slajdami (ms)
+                            disableOnInteraction: false, // działa nawet po kliknięciu
+                        },
+                        effect: "fade", // efekt płynnego przejścia
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                </script>
+            </div>
             <section class="about">
                 <h2>O nas!</h2>
                 <p>Cześć! Ruszamy z nasza stroną poświęconą temu co chcemy WAM zaoferować. Możemy dużo, ale wybierzecie tylko to co chcecie - nic więcej!</p>
@@ -73,14 +65,10 @@
                     <li>LinkedIn: <a href="https://www.linkedin.com/in/maciej-kara%C5%9B-20174a191/">LinkedIn Maciej Karaś</a></li>
                 </ul>
             </section>
+            <footer>
+                <p>© 2025 Maciej Karaś. Wszystkie prawa zastrzeżone.</p>
+            </footer>
         </main>
     </div>
-    <footer>
-        <p>© 2025 Maciej Karaś. Wszystkie prawa zastrzeżone.</p>
-    </footer>
-
-
-
-
 </body>
 </html>

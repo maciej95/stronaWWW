@@ -42,8 +42,8 @@ header h1 {
 main {
     flex: 1;
     max-width: 100%;
-    margin-left: 0,5rem;
-    margin-right: 0,5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     padding: 0 1rem;
 }
 
@@ -52,23 +52,57 @@ main {
     }
 
 .swiper {
-    width: 60%;
-    height: 100%;
+    max-width: 1200px;
+    width: 100%;
+    margin: 200px auto 50px auto; /* góra 300px, lewo/prawo auto, dó³ 0 */
+    display: flex;
+    justify-content: center; /* wyœrodkowanie poziome */
+    align-items: center; /* wyœrodkowanie pionowe */
 }
 
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 2; /* domyœlnie ukryte */
-    transition: opacity 1s ease; /* p³ynne przejœcie */
 }
 
     .swiper-slide img {
-        width: 50%;
-        height: 50%;
-        object-fit: cover; /* obraz wype³nia ca³y obszar */
+        max-width: 100%;
+        max-height: 80vh; /* ¿eby nie uciek³o poza ekran */
+        object-fit: contain;
+        display: block;
+        margin: auto; /* dodatkowe zabezpieczenie */
     }
+
+:root {
+    --swiper-navigation-color: #a47864; /* kolor strza³ek */
+    --swiper-pagination-color: #a47864; /* kolor aktywnej kropki */
+}
+
+
+.swiper-button-next::after {
+    content: "" !important; /* wywalamy domyœln¹ strza³kê */
+    background-image: url("zdjecia/next.png") !important;
+    background-repeat: no-repeat;
+    background-size: 27px 37px; /* dok³adny rozmiar */
+    width: 27px;
+    height: 37px;
+    display: block;
+}
+
+.swiper-button-prev::after {
+    content: "" !important; /* wywalamy domyœln¹ strza³kê */
+    background-image: url("zdjecia/back.png") !important;
+    background-repeat: no-repeat;
+    background-size: 27px 37px; /* dok³adny rozmiar */
+    width: 27px;
+    height: 37px;
+    display: block;
+}
+
+img {
+    margin: 0;
+}
 
 swiper-slide-visible{
     justify-content:center;
@@ -111,32 +145,25 @@ h2 {
 
 .about {
     max-width: 1000px;
-    margin-top: 105px;
-    margin-bottom: 2rem;
+    margin-top: 15px;
     background: white;
     padding: 1.5rem;
-    border: solid;
-    border-block-color: black;
+   
 }
 
 .product {
     max-width: 1000px;
     margin-top: 139px;
-    margin-bottom: 2rem;
     background: white;
     padding: 1.5rem;
-    border: solid;
-    border-block-color: black;
+    
 }
 
 .contact {
     max-width: 1000px;
-    margin-top: 174px;
-    margin-bottom: 2rem;
+    margin-top: 14px;
     background: white;
     padding: 1.5rem;
-    border: solid;
-    border-block-color: black;
 }
 
 ul {
