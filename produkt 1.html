@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nic więcej • produkty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="side">
+        <header>
+            <h1 class="logofoto">
+                <a href="index.html">
+                    <img src="zdjecia/logo.png" alt="logofoto" width="128" height="128" />
+                </a>
+            </h1>
+            <nav>
+                <a href="onas.html">o nas</a>
+                <a href="produkty.html">produkty</a>
+                <a href="kontakt.html">kontakt</a>
+            </nav>
+        </header>
+        <main class="produkt-szczegoly">
+            <h2>Produkt 1</h2>
+
+            <div class="galeria">
+                <!-- Główne zdjęcie -->
+                <div class="glowne-zdjecie">
+                    <img id="mainImage" src="zdjecia/Produkt 1/produkt1_1.jpg" alt="Produkt 1">
+                </div>
+                <!-- Miniaturki -->
+                <div class="miniaturki">
+                    <img src="zdjecia/Produkt 1/produkt1_1.jpg" alt="Miniatura 1" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 1/produkt1_2.jpg" alt="Miniatura 2" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 1/produkt1_3.jpg" alt="Miniatura 3" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 1/produkt1_4.jpg" alt="Miniatura 4" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 1/produkt1_5.jpg" alt="Miniatura 5" onclick="changeImage(this)">
+                </div>
+            </div>
+            <p class="opis">
+                Schody stalowe z blachy grubości 5mm spawane z kilku arkuszy. Malowane farbą najwyższej jakości od firmy Teknos. Bardzo selektywnie 
+                dobrany kolor przez Kasię. 
+            </p>
+            <script>
+                function changeImage(thumbnail) {
+                    document.getElementById("mainImage").src = thumbnail.src;
+                }
+            </script>
+        </main>
+    </div>
+    <footer>
+        <p>© 2025 Maciej Karaś. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>

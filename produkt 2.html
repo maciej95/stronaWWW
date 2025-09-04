@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nic wi cej   produkty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="side">
+        <header>
+            <h1 class="logofoto">
+                <a href="index.html">
+                    <img src="zdjecia/logo.png" alt="logofoto" width="128" height="128" />
+                </a>
+            </h1>
+            <nav>
+                <a href="onas.html">o nas</a>
+                <a href="produkty.html">produkty</a>
+                <a href="kontakt.html">kontakt</a>
+            </nav>
+        </header>
+        <main class="produkt-szczegoly">
+            <h2>Produkt 2</h2>
+
+            <div class="galeria">
+                <!-- G  wne zdj cie -->
+                <div class="glowne-zdjecie">
+                    <img id="mainImage" src="zdjecia/Produkt 2/produkt2_1.jpg" alt="Produkt 2">
+                </div>
+                <!-- Miniaturki -->
+                <div class="miniaturki">
+                    <img src="zdjecia/Produkt 2/produkt2_1.jpg" alt="Miniatura 1" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 2/produkt2_2.jpg" alt="Miniatura 2" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 2/produkt2_3.jpg" alt="Miniatura 3" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 2/produkt2_4.jpg" alt="Miniatura 4" onclick="changeImage(this)">
+                    <img src="zdjecia/Produkt 2/produkt2_5.jpg" alt="Miniatura 5" onclick="changeImage(this)">
+                </div>
+            </div>
+            <p class="opis">
+                Huśtawka. Dąb.  
+            </p>
+            <script>function changeImage(thumbnail) {
+                    document.getElementById("mainImage").src = thumbnail.src;
+                }</script>
+        </main>
+    </div>
+    <footer>
+        <p>  2025 Maciej Kara . Wszystkie prawa zastrze one.</p>
+    </footer>
+</body>
+</html>
