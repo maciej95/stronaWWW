@@ -2,7 +2,7 @@ body {
     margin: 0;
     /*font-family: Arial, sans-serif;*/
     font-family: Helvetica;
-    background-color: #f9fafb;
+    background-color: white;
     color: #333;
     line-height: 1.6;
 }
@@ -54,16 +54,17 @@ main {
 .swiper {
     max-width: 1200px;
     width: 100%;
-    margin: 200px auto 50px auto; /* góra 300px, lewo/prawo auto, dó³ 0 */
+    margin: 200px auto 50px auto; /* góra 200px, lewo/prawo auto, dó³ 50px */
     display: flex;
-    justify-content: center; /* wyœrodkowanie poziome */
-    align-items: center; /* wyœrodkowanie pionowe */
+    justify-content: center; /* wyœrodkowanie kontenera */
+    align-items: center;
 }
 
 .swiper-slide {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* przesuwa zawartoœæ (zdjêcie) do lewej */
     align-items: center;
+    position: relative;
 }
 
     .swiper-slide img {
@@ -71,7 +72,10 @@ main {
         max-height: 80vh; /* ¿eby nie uciek³o poza ekran */
         object-fit: contain;
         display: block;
-        margin: auto; /* dodatkowe zabezpieczenie */
+        margin: 0; /* usuniêcie marginesów */
+        position: relative;
+        left: 30%; /* przesuniêcie zdjêcia w lewo – reguluje proporcjê 30/70 */
+        transform: translateX(-10%); /* delikatna korekta wizualna */
     }
 
 :root {
@@ -98,6 +102,10 @@ main {
     width: 27px;
     height: 37px;
     display: block;
+}
+
+.swiper-pagination {
+    display: none !important;
 }
 
 img {
@@ -188,7 +196,7 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
-    background: #f1f5f9;
+    background: white;
     font-size: 0.9rem;
     color: #555;
 }
@@ -278,6 +286,67 @@ footer {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #444;
+}
+
+/* Dla ekranów laptopowych i mniejszych */
+@media (max-width: 1400px) and (min-width: 1025px) {
+    .side {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    header {
+        flex: 0 0 260px; /* by³o 350px – zwê¿amy boczny panel */
+        text-align: right;
+        padding-right: 0.5rem;
+    }
+
+    main {
+        flex: 1;
+        margin: 0 auto;
+        padding: 0 1rem;
+        max-width: 1000px; /* ograniczamy, ¿eby nie ucina³o prawej strony */
+    }
+
+    .swiper {
+        margin: 120px auto 50px auto;
+        width: 95%; /* lekko zwê¿ony, ¿eby pasowa³ do ekranu laptopa */
+    }
+
+    .about,
+    .contact,
+    .product {
+        margin: 1.5rem auto;
+        width: 95%;
+        max-width: 900px;
+        padding: 1rem;
+    }
+
+    footer {
+        width: 100%;
+        margin: 2rem auto 0 auto;
+        text-align: center;
+    }
+}
+
+/* Dodatkowe dopasowanie dla mniejszych laptopów, np. 12–13 cali */
+@media (max-width: 1200px) and (min-width: 900px) {
+    header {
+        flex: 0 0 220px;
+        font-size: 0.95rem;
+    }
+
+    main {
+        max-width: 900px;
+    }
+
+    .swiper img {
+        max-height: 70vh;
+    }
+
+    .produkty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
