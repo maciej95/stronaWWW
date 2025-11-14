@@ -54,7 +54,7 @@ main {
 .swiper {
     max-width: 1200px;
     width: 100%;
-    margin: 200px auto 50px auto; /* góra 200px, lewo/prawo auto, dó³ 50px */
+    margin: 170px auto 50px auto; /* góra 200px, lewo/prawo auto, dó³ 50px */
     display: flex;
     justify-content: center; /* wyœrodkowanie kontenera */
     align-items: center;
@@ -286,6 +286,7 @@ footer {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #444;
+    text-align:left;
 }
 
 /* Dla ekranów laptopowych i mniejszych */
